@@ -3,9 +3,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { FaTachometerAlt, FaTrophy, FaBook, FaSignOutAlt, FaSearch } from 'react-icons/fa'; // Importing the icons
-
 /* eslint-disable @typescript-eslint/no-unused-vars */
-
 const Dashboard: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState('05:05:05');
   const [score, setScore] = useState(5763);
@@ -33,7 +31,7 @@ const Dashboard: React.FC = () => {
       <aside className="w-64 p-6 bg-[rgba(10,12,14,1)] flex flex-col">
         <div className="mb-10 text-center">
           <div className="mb-2 flex items-center justify-center space-x-4">
-            <Image src="/flower.png" alt="Avatar" width={64} height={64} className="rounded-full" /> {/* Increased size */}
+            <Image src="/flower.png" alt="Avatar" width={64} height={64} className="rounded-full" />
             <div>
               <p className="text-lg">Player 1</p>
               <p className="text-sm text-gray-400">pimla@gmail.com</p>
@@ -43,26 +41,26 @@ const Dashboard: React.FC = () => {
 
         <div className="mb-10">
           <div className="flex items-center bg-gray-700 p-2 rounded-md">
-            <FaSearch className="text-gray-400 mr-2" /> {/* Search icon */}
+            <FaSearch className="text-gray-400 mr-2" />
             <input type="text" placeholder="Search..." className="w-full bg-transparent text-white outline-none" />
           </div>
         </div>
 
         <nav className="flex-1">
           <a href="#" className="block py-3 text-white text-lg flex items-center">
-            <FaTachometerAlt className="mr-3 text-[#C8BCF6]" /> Dashboard {/* Changed icon color */}
+            <FaTachometerAlt className="mr-3 text-[#C8BCF6]" /> Dashboard
           </a>
           <a href="#" className="block py-3 text-white text-lg flex items-center">
-            <FaTrophy className="mr-3 text-[#C8BCF6]" /> Leaderboard {/* Changed icon color */}
+            <FaTrophy className="mr-3 text-[#C8BCF6]" /> Leaderboard
           </a>
           <a href="#" className="block py-3 text-white text-lg flex items-center">
-            <FaBook className="mr-3 text-[#C8BCF6]" /> Resources {/* Changed icon color */}
+            <FaBook className="mr-3 text-[#C8BCF6]" /> Resources
           </a>
         </nav>
 
         <div className="pt-10">
           <a href="#" className="text-white text-lg flex items-center">
-            <FaSignOutAlt className="mr-3 text-[#C8BCF6]" /> {/* Changed icon color */}
+            <FaSignOutAlt className="mr-3 text-[#C8BCF6]" />
             Logout
           </a>
         </div>
@@ -74,17 +72,17 @@ const Dashboard: React.FC = () => {
         <section className="flex justify-center items-center mb-10">
           <div className="text-center">
             <h1 className="text-3xl mb-2">Time Left</h1>
-            <p className="text-6xl font-bold leading-[30.5px] tracking-[0.5%]">{timeLeft}</p> {/* Updated styles */}
+            <p className="text-6xl font-bold leading-tight tracking-wider">{timeLeft}</p>
           </div>
           <div className="ml-4">
-            <Image src="/mario.png" alt="Mario" width={336} height={200} />
+            <Image src="/mario.png" alt="Mario" width={180} height={180} />
           </div>
         </section>
 
         {/* Repository Section */}
-        <section className="w-full mx-auto max-w-4xl mb-6"> {/* Adjusted margin here */}
+        <section className="w-full mx-auto max-w-4xl mb-6">
           <div className="border-2 border-gray-600 rounded-lg bg-black p-6">
-            <h2 className="text-3xl mb-3 text-center">Repositories</h2> {/* Centered header with size 36 and spacing 3 */}
+            <h2 className="text-3xl mb-3 text-center">Repositories</h2>
             <div className="space-y-4">
               {repositories.map((repo) => (
                 <div key={repo.id} className="bg-[rgba(25,25,25,1)] p-4 border border-gray-600 rounded-lg flex justify-between items-center">
@@ -100,13 +98,13 @@ const Dashboard: React.FC = () => {
       </main>
 
       {/* Right Sidebar */}
-      <aside className="w-64 p-8 bg-[rgba(10,12,14,1)] border-l-2 border-gray-900 flex flex-col overflow-y-auto"> {/* Added overflow-y-auto for scrolling */}
+      <aside className="w-64 p-8 bg-[rgba(10,12,14,1)] border-l-2 border-gray-900 flex flex-col overflow-y-auto">
         {/* Score Section */}
         <div className="mb-8 p-6 bg-[rgba(25,25,25,1)] border border-gray-700 rounded-lg text-center">
           <h2 className="text-2xl mb-4">Your Score</h2>
           <div className="flex justify-center items-center space-x-4">
             <p className="text-lg font-bold">{score}</p>
-            <Image src="/coins.png" alt="Coins" width={64} height={64} />
+            <Image src="/coins.png" alt="Coins" width={48} height={48} />
           </div>
         </div>
 
